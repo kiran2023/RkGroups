@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css">
+
+    <link rel="stylesheet" href="bold.css">
+
+    <title>JOKES | RK GROUPS</title>
+    <link rel="icon" href="images/logo2.png">
+
+    <style>
+        @media print {
+            .menu {
+                visibility: hidden;
+                z-index: 9999;
+            }
+        }
+
+        .jokesBox {
+            margin-top: 200px;
+            width: auto;
+            height: fit-content;
+        }
+
+        .container .row .jokesBox .panel-footer {
+            padding: 1rem;
+            margin-top: 10rem;
+            transition: all 0.3s ease-in-out;
+            font-size: 2rem;
+        }
+
+        .jokesBox .panel-footer:hover {
+            background-color: lightskyblue;
+            color: azure;
+        }
+    </style>
+</head>
+
+<body style="background-color: cadetblue;">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="conatiner-fluid">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsiveMenu">
+                <i class="fa fa-list" aria-hidden="true" style="color: white;"></i>
+            </button>
+
+            <div class="navbar-header">
+                <div class="navbar-brand" style="color: white;"><a href="index.html"
+                        style="color:white;text-decoration: none;">RK GROUPS</a></div>
+            </div>
+
+            <div id="bgimg">
+                <div class=" navbar-collapse" id="responsiveMenu">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Articles<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu table-striped">
+                                <li id="latest"><a href="latest.html"><i class="fa fa-address-card"></i>Latest<span
+                                            class="badge">7</span></a></li>
+                                <li class="disabled"><a href="#"><i class="fa fa-newspaper-o"
+                                            aria-hidden="true"></i>Blogs<span class="badge">0</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu table-striped">
+                                <li id="latest"><a href="latest.html"><i class="fa fa-address-card"></i>Latest<span
+                                            class="badge">7</span></a></li>
+                                <li class="disabled"><a href="#"><i class="fa fa-newspaper-o"
+                                            aria-hidden="true"></i>Blogs<span class="badge">7</span></a></li>
+                            </ul>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="active"><a href="articleJokes.html"><i class="fa fa-angellist"></i>Jokes</a>
+                                </li>
+                                <li><a href="bulb.html"><i class="fa fa-lightbulb-o"></i>Bulb</a></li>
+                                <li><a href="TemperatureConversion.html"><i
+                                            class="fa fa-lightbulb-o"></i>TemperatureConversion</a></li>
+                            </ul>
+                        </li>
+                        <li class="disabled"><a href="#">News</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="panel panel-primary jokesBox">
+                    <div class="panel-heading" style="display: flex;justify-content: center;text-align: center;">
+                        Interesting Jokes</div>
+                    <div class="panel-body">
+                        <p class="text-center" id="display"></p>
+                    </div>
+                    <div class="panel-footer panel-success btn btn-primary" style="color: black;display: flex;justify-content: center;place-items: 
+                        center;" id="nextjoke">Next Joke
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    </div>
+    <script>
+        const jokebtn = document.getElementById("nextjoke");
+        const jokedisplay = document.getElementById("display");
+
+        const jokes = async () => {
+            try {
+                const typehead = {
+                    headers: {
+                        Accept: "application/json"
+                    }
+                }
+                const data = await fetch("https://icanhazdadjoke.com/", typehead);
+                const datafetch = await data.json();
+                jokedisplay.innerHTML = datafetch.joke;
+            } catch (error) {
+                console.log(`The Error is ${error}`);
+            }
+        }
+
+        jokebtn.addEventListener('click', jokes);
+        jokes();
+
+    </script>
+
+    <div style="position:absolute;display: none;" id="value" class="col-2 text-center menu">
+        <ul class="list-group list-group-flush font-weight-bold">
+            <a href="index.html" class="list-group-item list-group-item-action"><i class="fa fa-home pr-2"
+                    aria-hidden="true"></i>Back To Home</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="location.reload()"><i
+                    class="fa fa-refresh pr-2" aria-hidden="true"></i>Reload</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="history.back()"><i
+                    class="fa fa-arrow-circle-left pr-3"></i>Back
+            </a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="history.forward()"><i
+                    class="fa fa-arrow-circle-right pr-2"></i>Forward</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="window.print()"><i
+                    class="fa fa-print pr-2"></i>Print</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="history.go(-2);"><i
+                    class="fa fa-angle-double-left pr-2"></i>Go Back</a>
+        </ul>
+    </div>
+
+
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
