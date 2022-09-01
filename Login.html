@@ -90,7 +90,7 @@
                         if (reg == Reg.value && mail == email.value && decrypt == password.value && password.value!="" ) {
                             logon(snapshot.val());
                         } else  if (reg != Reg.value || mail != email.value || decrypt != password.value || password.value=="" ){
-                            alert("Invalid RegisterNumber/Username/password");
+                            alert("Invalid Credentials");
                         }
                     }
                 });
