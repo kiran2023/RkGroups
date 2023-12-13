@@ -1,6 +1,4 @@
-<img src="https://github.com/kiran2023/RkGroups/blob/main/images/logo2.png"  width="48" height="48"/> 
-
-<h1> RK Groups </h1>
+## RK Groups 
 A blog website where blog posts and projects can be accessed only after login. User login
 and registration using Firebase as a backend database and responsive website.
 
