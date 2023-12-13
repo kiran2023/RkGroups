@@ -1,8 +1,10 @@
-[images/logo2.png](https://github.com/kiran2023/RkGroups/blob/main/images/logo2.png)" <h1> RK Groups </h1>
+<img src="https://github.com/kiran2023/RkGroups/blob/main/images/logo2.png"  width="48" height="48"/> 
+
+<h1> RK Groups </h1>
 A blog website where blog posts and projects can be accessed only after login. User login
 and registration using Firebase as a backend database and responsive website.
 
-Technology Used - Bootstrap, JavaScript, Firebase.
+Technology Used - Bootstrap, JavaScript, Firebase.  
 
 1. Login/Registration
 2. Access to my projects and blog posts after login
