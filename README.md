@@ -1,4 +1,4 @@
-#  <link rel="icon" href="images/logo2.png"> RK Groups
+<image src="images/logo2.png"  width="48" height="48" /> <h1> RK Groups </h1>
 A blog website where blog posts and projects can be accessed only after login. User login
 and registration using Firebase as a backend database and responsive website.
 
