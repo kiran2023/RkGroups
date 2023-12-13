@@ -1,4 +1,4 @@
-# RK Groups
+#  <link rel="icon" href="images/logo2.png"> RK Groups
 A blog website where blog posts and projects can be accessed only after login. User login
 and registration using Firebase as a backend database and responsive website.
 
