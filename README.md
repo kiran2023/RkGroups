@@ -9,17 +9,17 @@ Technology Used - Bootstrap, JavaScript, Firebase.
 3. Encryption, Decryption of user passwords
 ---
 # Snippets
-# Desktop View - Without Login
+### Desktop View - Without Login
 
 <img style="margin-bottom:2rem" width="948" alt="image" src="https://github.com/kiran2023/RkGroups/assets/88279441/257e5042-f049-4262-8edf-72d05d2d84ac">
 
-# Desktop View - After Login
+### Desktop View - After Login
 
 <img width="945" alt="image" src="https://github.com/kiran2023/RkGroups/assets/88279441/b7eaee5c-4ec6-458e-ad85-264c36655612">
 
-# Responsive View
+### Responsive View
 
 <img width="152" alt="image" src="https://github.com/kiran2023/RkGroups/assets/88279441/30cb38ee-e068-4d61-836c-86bf8af5ce32">
 
 
-# Visit👉 https://kiran2023.github.io/RkGroups
+### Visit👉 https://kiran2023.github.io/RkGroups
